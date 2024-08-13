@@ -1,0 +1,36 @@
+#ifndef __OLED_DEF__
+#define __OLED_DEF__
+
+// D/C = 0(Command)
+#define SET_CONTRAST 0x81 // 设置对比度, 属于双字节指令, 由第二个指令控制对比度(0~255)
+
+#define RESUME_RAM_DISPLAY 0xA4 // 恢复 RAM 显示
+#define ENTIRE_DISPLAY_ON 0xA5 // 点亮全屏
+
+#define NORMAL_DISPLAY 0xA6 // 1亮0灭
+#define INVERSE_DISPLAY 0xA7 // 0亮1灭
+
+#define DISPLAY_OFF 0xAE // 关闭显示
+#define DISPLAY_ON 0xAF // 开启显示
+
+#define SET_ADDRESSING_MODE 0x20 // 设置寻址模式, 属于双字节指令, 由第二个指令确定寻址模式
+#define ADDRESSING_MODE_HORIZONTAL 0x00 // 水平地址模式
+#define ADDRESSING_MODE_VERTICAL 0x01 // 垂直地址模式
+#define ADDRESSING_MODE_PAGE 0x03 // 页地址模式
+
+#define RIGHT_HORIZONTAL_SCROLL 0x26 // 右水平滚动
+#define LEFT_HORIZONTAL_SCROLL 0x27 // 左水平滚动
+
+#define SET_COLOMN_ADDRESS_BOUNDARY 0x21 // 设置起始/终止列地址, 属于三字节指令(下级指令的范围为0~127)(仅在水平/垂直模式下有效)
+
+#define SET_PAGE_ADDRESS_BOUNDARY 0x22 // 设置起始/终止页地址, 属于三字节指令(下级指令的范围为0~7)(仅在水平/垂直模式下有效)
+
+#define SET_START_LINE(__LINE__) (__LINE__) // 设置GDDRAM起始行(RAM的第(__LINE__ - 0x40)行对应COM[0])(__LINE__的范围为0x40~0x7F)
+
+#define SET_SEGMENT_REMAP_NORMAL 0xA0 // 列地址0映射到SEG[0]
+#define SET_SEGMENT_REMAP_INVERSE 0xA1 // 列地址127映射到SEG[0]
+
+#define SET_SCAN_DIRECTION_NORMAL 0xC0 // 从COM[0]扫描到COM[N-1], N为复用率
+#define SET_SCAN_DIRECTION_INVERSE 0xC8 // 从COM[N-1]扫描到COM[0], N为复用率
+
+#endif // !__OLED_DEF__

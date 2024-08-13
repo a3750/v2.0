@@ -1,0 +1,54 @@
+//
+// !!! WARNING !!! AUTO-GENERATED FILE!
+// PLEASE DO NOT MODIFY IT AND USE "platformio.ini":
+// https://docs.platformio.org/page/projectconf/section_env_build.html#build-flags
+//
+{
+    "configurations": [
+        {
+            "name": "PlatformIO",
+            "includePath": [
+                "/Users/wangjie/Documents/PlatformIO/cmsis/v2.0",
+                "/Users/wangjie/Documents/PlatformIO/cmsis/v2.0/include",
+                "/Users/wangjie/Documents/PlatformIO/cmsis/v2.0/drivers/Inc",
+                "/Users/wangjie/Documents/PlatformIO/cmsis/v2.0/String",
+                "/Users/wangjie/Documents/PlatformIO/cmsis/v2.0/oled",
+                "/Users/wangjie/Documents/PlatformIO/cmsis/v2.0/fmt",
+                "/Users/wangjie/.platformio/packages/framework-cmsis@2.50501.200527/CMSIS/Include",
+                "/Users/wangjie/.platformio/packages/framework-cmsis-stm32f1/Include",
+                ""
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "path": [
+                    "/Users/wangjie/Documents/PlatformIO/cmsis/v2.0",
+                    "/Users/wangjie/Documents/PlatformIO/cmsis/v2.0/include",
+                    "/Users/wangjie/Documents/PlatformIO/cmsis/v2.0/drivers/Inc",
+                    "/Users/wangjie/Documents/PlatformIO/cmsis/v2.0/String",
+                    "/Users/wangjie/Documents/PlatformIO/cmsis/v2.0/oled",
+                    "/Users/wangjie/Documents/PlatformIO/cmsis/v2.0/fmt",
+                    "/Users/wangjie/.platformio/packages/framework-cmsis@2.50501.200527/CMSIS/Include",
+                    "/Users/wangjie/.platformio/packages/framework-cmsis-stm32f1/Include",
+                    ""
+                ]
+            },
+            "defines": [
+                "PLATFORMIO=60115",
+                "STM32F103xE",
+                "STM32F1",
+                "FMT_HEADER_ONLY",
+                "F_CPU=72000000L",
+                "__PLATFORMIO_BUILD_DEBUG__",
+                ""
+            ],
+            "cppStandard": "c++17",
+            "compilerPath": "/Users/wangjie/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/arm-none-eabi-gcc",
+            "compilerArgs": [
+                "-mthumb",
+                "-mcpu=cortex-m3",
+                ""
+            ]
+        }
+    ],
+    "version": 4
+}

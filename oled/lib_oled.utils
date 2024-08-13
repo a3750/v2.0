@@ -1,0 +1,52 @@
+#ifndef __OLED_UTILS__
+#define __OLED_UTILS__
+
+#include <stdio.h>
+#include <wchar.h>
+#include <stdarg.h>
+#include <stdint.h>
+#include <stddef.h>
+#include <string.h>
+
+#include "gpio.hpp"
+
+#include "oled.font"
+#include "oled.def"
+#include "chinese.h"
+
+#ifndef OLED_DELAY
+#include "systick.hpp"
+#define OLED_DELAY(nticks) (syst.delay(nticks))
+#endif // !OLED_DELAY
+
+/**
+ * @brief 写入Oled字节的类型(命令/数据)
+ *
+ */
+enum OledWriteType : uint8_t
+{
+    Commamd = 0, // 命令
+    Data = 1,    // 数据
+};
+
+/**
+ * @brief 写入文本的显示方式(暗底亮字/亮底暗字)
+ *
+ */
+enum OledTextBrightness : uint8_t
+{
+    Dark = 0,  // 亮底暗字
+    Light = 1, // 暗底亮字
+};
+
+/**
+ * @brief 写入文本的大小
+ *
+ */
+enum OledTextSize : uint16_t
+{
+    Pages1Cols6 = (8 << 8) | 6,
+    Pages2Cols8 = (16 << 8) | 8,
+};
+
+#endif // !__OLED_UTILS__

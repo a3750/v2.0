@@ -1,0 +1,33 @@
+{
+    "MicroPython.executeButton": [
+        {
+            "text": "▶",
+            "tooltip": "运行",
+            "alignment": "left",
+            "command": "extension.executeFile",
+            "priority": 3.5
+        }
+    ],
+    "MicroPython.syncButton": [
+        {
+            "text": "$(sync)",
+            "tooltip": "同步",
+            "alignment": "left",
+            "command": "extension.execute",
+            "priority": 4
+        }
+    ],
+    "files.associations": {
+        "clock.h": "c",
+        "*.font": "cpp",
+        "*.def": "cpp",
+        "*.utils": "cpp",
+        "oled": "cpp",
+        "serial.hpp": "c",
+        "bitband.h": "c",
+        "stm32f1xx.h": "c",
+        "fmt.hpp": "c",
+        "str.hpp": "c",
+        "int.hpp": "c"
+    }
+}
